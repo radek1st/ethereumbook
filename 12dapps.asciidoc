@@ -454,7 +454,7 @@ ENS was launched on Star Wars Day, May 4, 2017 (after a failed attempt to launch
 
 ==== The ENS Specification
 
-((("ENS (Ethereum Name Service)","design of", id="ix_12dapps-asciidoc12", range="startofrange")))ENS is ((("ENS (Ethereum Name Service)","specification")))specified mainly in three Ethereum Improvement Proposals: EIP-137, which specifies the basic functions of ENS; EIP-162, which describes the auction system for the +.eth+ root; and EIP-181, which specifies reverse registration of addresses.
+((("ENS (Ethereum Name Service)","design of", id="ix_12dapps-asciidoc12", range="startofrange")))ENS is ((("ENS (Ethereum Name Service)","specification")))specified mainly in three Ethereum Improvement Proposals: EIP-137, which specifies the basic functions of ENS; EIP-162, which describes the auction system for the +.eth+ root; and EIP-181, which specifies reverse resolution of addresses.
 
 ENS follows a "sandwich" design philosophy: a very simple layer on the bottom, followed by layers of more complex but replaceable code, with a very simple top layer that keeps all the funds in separate accounts.
 
@@ -555,7 +555,7 @@ On a blockchain, some changes are required:
 
 * To ensure bidders don't submit bids they have no intention of paying, they must lock up a value equal to or higher than their bid beforehand, to guarantee the bid is valid.
 * Because you can't hide secrets on a blockchain, bidders must execute at least two transactions (a commit–reveal process), in order to hide the original value and name they bid on.
-* Since you can't reveal all bids simultaneously in a decentralized system, bidders must reveal their own bids themselves; if they don't, they forfeit their locked-up funds. Without this forfeit, one could make many bids and choose to reveal only one or two, turning a sealed-bid auction into a traditional increasing price auction.
+* Since you can't reveal all bids simultaneously in a decentralized system, bidders must reveal their own bids themselves; if they don't, they forfeit their locked-up funds. Without this forfeit, one could make many bids and choose to reveal only one or two, turning a sealed-bid auction into a traditional increasing price pass:[<span class="keep-together">auction</span>].
 
 Therefore, the auction is a four-step process:
 
@@ -656,7 +656,7 @@ First, let's create a subdomain for our example Auction DApp (see <<ens-manager-
 .Adding the subdomain auction.ethereumbook.eth
 image::images/ens_manager_add_subdomain.png["Adding the subdomain auction.ethereumbook.eth"]
 
-Once we've created the subdomain, we can enter +auction.ethereumbook.eth+ in the search box and manage it, just as we managed the domain +ethereumbook.eth+ previously.
+Once we've created the subdomain, we can enter +auction.ethereumbook.eth+ in the search box and manage it, just as we managed the domain +ethereumbook.eth+ pass:[<span class="keep-together">previously</span>].
 
 [role="pagebreak-before"]
 ==== ENS Resolvers
